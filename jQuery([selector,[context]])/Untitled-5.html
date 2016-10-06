@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script>
+    var element = document.getElementsByTagName("p");//获取p标签的集合
+
+    $(function(){
+      
+        $.ajax({
+            type:"GET",
+            dataType:"xml",
+            url:"1.xml",
+            data:"a=123",
+            success:function(date){
+                $("#demo").html($("div",date));//将$("div",date)从xml中选择div 元素，写入到#demo里面
+            }//success
+        });//end ajax        
+        
+     });//end function
+</script>
+
+<p id="demo"></p>
+
+
+<body>
+</body>
+</html>
