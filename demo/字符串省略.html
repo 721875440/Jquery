@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+
+
+
+
+
+
+<body>
+    <div id="str">123456789794654654654654654654654</div>
+    <script>
+    window.onload = function(){
+        var str = document.getElementById("str").innerHTML;
+        var len = str.length;
+        var newStr="";
+        for(var i = 0;i<len;i++){
+            if(i>5&&i<20){
+                newStr+="*";
+            }else{
+                newStr+=str[i];
+            }
+        }
+        document.getElementById("str").innerHTML = newStr;
+    }
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
